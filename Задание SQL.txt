@@ -1,0 +1,6 @@
+SELECT p.Name, c.Name
+FROM dbo.Products p
+JOIN dbo.ProductRelationship pr
+ ON pr.Product_Id = p.Id 
+LEFT JOIN dbo.Categories c
+ ON c.Id = pr.Category_Id
